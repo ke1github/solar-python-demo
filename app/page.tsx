@@ -1,4 +1,6 @@
 import Link from "next/link";
+import ApiStatus from "./components/ApiStatus";
+import Calculator from "./components/Calculator";
 
 export default function Home() {
   return (
@@ -125,7 +127,7 @@ export default function Home() {
             Quick Start Guide
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="p-8 rounded-2xl bg-linear-to-br from-blue-50 to-white dark:from-blue-950/30 dark:to-zinc-900 border border-blue-200 dark:border-blue-800">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 bg-blue-600 text-white rounded-lg flex items-center justify-center font-bold">
@@ -171,6 +173,12 @@ export default function Home() {
                 </code>
               </p>
             </div>
+          </div>
+
+          {/* Demo Components */}
+          <div className="grid md:grid-cols-2 gap-8">
+            <ApiStatus />
+            <Calculator />
           </div>
         </div>
 
