@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ApiStatus from "./components/ApiStatus";
 import Calculator from "./components/Calculator";
+import DataAnalysis from "./components/DataAnalysis";
 
 export default function Home() {
   return (
@@ -176,10 +177,13 @@ export default function Home() {
           </div>
 
           {/* Demo Components */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
             <ApiStatus />
             <Calculator />
           </div>
+
+          {/* Data Analysis Component */}
+          <DataAnalysis />
         </div>
 
         {/* Learning Path */}

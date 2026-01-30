@@ -4,7 +4,7 @@ A learning-focused FastAPI application
 """
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routers import calculator
+from routers import calculator, data
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -62,3 +62,4 @@ def api_info():
 
 # Include routers
 app.include_router(calculator.router)
+app.include_router(data.router)
