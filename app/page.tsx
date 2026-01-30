@@ -2,6 +2,7 @@ import Link from "next/link";
 import ApiStatus from "./components/ApiStatus";
 import Calculator from "./components/Calculator";
 import DataAnalysis from "./components/DataAnalysis";
+import TaskManager from "./components/TaskManager";
 
 export default function Home() {
   return (
@@ -183,7 +184,12 @@ export default function Home() {
           </div>
 
           {/* Data Analysis Component */}
-          <DataAnalysis />
+          <div className="mb-8">
+            <DataAnalysis />
+          </div>
+
+          {/* Task Manager Component */}
+          <TaskManager />
         </div>
 
         {/* Learning Path */}

@@ -4,7 +4,8 @@ A learning-focused FastAPI application
 """
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routers import calculator, data
+from routers import calculator, data, users, tasks
+from database import init_db
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -12,6 +13,9 @@ app = FastAPI(
     description="Learning project for Python + Next.js integration",
     version="1.0.0",
 )
+
+# Initialize database
+init_db()
 
 # Configure CORS for Next.js frontend
 app.add_middleware(
@@ -63,3 +67,5 @@ def api_info():
 # Include routers
 app.include_router(calculator.router)
 app.include_router(data.router)
+app.include_router(users.router)
+app.include_router(tasks.router)
